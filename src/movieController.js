@@ -35,7 +35,7 @@ const info = (movies, movieID) => {
 }
 
 const editName = (movies, movieID, updatedName) => {
-    const index = movies.findIndex((animal) => animal.id === movieID);
+    const index = movies.findIndex((movie) => movie.id === movieID);
     if (index > -1) {
         const oldName = movies[index].name;
         movies[index].id = movieID;
