@@ -25,6 +25,9 @@ const run = () => {
             writeToFile = true;
             break;
     }
+    if(writeToFile){
+        writeJSONFile('./data', 'animals.json', updatedMovies);
+    }
 }
 
 run();
