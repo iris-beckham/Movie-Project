@@ -34,5 +34,18 @@ const info = (movies, movieID) => {
     return `Title: ${movie.name}\nCost: $${movie.priceInCents/100.00}\nDirected By: ${movie.castAndCrew.director}\nStarring: ${movie.castAndCrew.actors.join(", ")}\n"${movie.famousLine}"`
 }
 
-module.exports = {create, createMovies, index, info}
+const destroy = (movies, movieID) => {
+    const index = movies.findIndex((movie) => movie.id === movieID);
+    if (index > -1) {
+        const name = movies[index].name;
+        movies.splice(index, 1);
+        console.log(`${name} successfully removed from collection`);
+        return movies;
+    } else {
+        console.log(`Movie with id ${movieID} not found. No action taken`);
+        return movies;
+    }
+}
+
+module.exports = {create, createMovies, index, info, destroy}
 
