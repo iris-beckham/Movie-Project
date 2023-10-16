@@ -1,4 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
+const {create} = require('./src/movieController')
 
 const movies = readJSONFile('./data', 'movies.json');
 
@@ -10,7 +11,7 @@ const run = () => {
 
     switch (action) {
         case "create":
-            console.log(action, movies)
+            updatedMovies = create(movies);
             writeToFile = true;
             break;
         case "read":
@@ -28,7 +29,7 @@ const run = () => {
             console.log("There was an error.")
     }
     if(writeToFile){
-        writeJSONFile('./data', 'animals.json', updatedMovies);
+        writeJSONFile('./data', 'movies.json', updatedMovies);
     }
 }
 
