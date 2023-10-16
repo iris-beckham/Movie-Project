@@ -25,5 +25,9 @@ const createMovies = (movies, num) => {
     return movies;
 }
 
-module.exports = {create, createMovies}
+const index = (movies) => {
+    return movies.map((movie) => movie.id + ' ' + movie.name).join('\n');
+}
+
+module.exports = {create, createMovies, index}
 

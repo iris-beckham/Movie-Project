@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
-const {create, createMovies} = require('./src/movieController')
+const {create, createMovies, index} = require('./src/movieController')
 
 const movies = readJSONFile('./data', 'movies.json');
 
@@ -15,8 +15,8 @@ const run = () => {
             updatedMovies = arg ? createMovies(movies, arg) : create(movies);
             writeToFile = true;
             break;
-        case "read":
-            console.log(action, movies)
+        case "index":
+            console.log(index(movies))
             break;
         case "update":
             console.log(action, movies)
