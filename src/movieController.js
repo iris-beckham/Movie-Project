@@ -18,5 +18,12 @@ const create = (movies) => {
     return movies;
 }
 
-module.exports = {create}
+const createMovies = (movies, num) => {
+    for (let i = 0; i < num; i++) {
+        movies = create(movies)
+    }
+    return movies;
+}
+
+module.exports = {create, createMovies}
 
