@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
-const {create, createMovies, index, info, destroy} = require('./src/movieController')
+const {create, createMovies, index, info, destroy, editName} = require('./src/movieController')
 
 const movies = readJSONFile('./data', 'movies.json');
 
@@ -22,7 +22,7 @@ const run = () => {
             console.log(info(movies, arg))
             break;
         case "update":
-            console.log(action, movies)
+            updatedMovies = editName(movies, arg,  process.argv[4])
             writeToFile = true;
             break;
         case "delete":
