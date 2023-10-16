@@ -1,6 +1,6 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
 const {create, createMovies, index, info, destroy, editName} = require('./src/movieController')
-const {addToCart} = require('./src/cartController')
+const {addToCart, totalCost} = require('./src/cartController')
 
 const movies = readJSONFile('./data', 'movies.json');
 const cart = readJSONFile('./data', 'cart.json');
@@ -33,6 +33,7 @@ const run = () => {
             break;
         case "addToCart":
             updatedCart = addToCart(movies, cart, arg);
+            console.log(`Total: ${totalCost(cart)}`)
             writeToCartFile = true;
             break;
         case "emptyCart":
