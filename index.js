@@ -35,6 +35,10 @@ const run = () => {
             updatedCart = addToCart(movies, cart, arg);
             writeToCartFile = true;
             break;
+        case "emptyCart":
+            updatedCart = [];
+            writeToCartFile = true;
+            break;
         default:
             console.log("There was an error.")
     }
