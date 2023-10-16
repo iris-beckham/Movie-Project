@@ -48,6 +48,19 @@ const editName = (movies, movieID, updatedName) => {
     }
 }
 
+const editStockValue = (movies, movieID, newStockValue) => {
+    const index = movies.findIndex((movie) => movie.id === movieID);
+    if (index > -1) {
+        movies[index].id = movieID;
+        movies[index].inStock = newStockValue;
+        movies[index].inStock ? console.log(`${movies[index].name} is back in Stock!`) : console.log(`${movies[index].name} is out of stock`)
+        return movies;
+    } else {
+        console.log(`Movie with id ${movieID} not found. No action taken`);
+        return movies;
+    }
+}
+
 const destroy = (movies, movieID) => {
     const index = movies.findIndex((movie) => movie.id === movieID);
     if (index > -1) {
