@@ -20,4 +20,8 @@ const totalCost = (cart) => {
     return `$${total/100.00}`;
 }
 
-module.exports = { addToCart, totalCost }
+const showCart = (cart) => {
+    return cart.map((movie) => '$'+movie.priceInCents/100.00 + ' ' + movie.name).join('\n') + '\nTotal: ' + totalCost(cart);
+}
+
+module.exports = { addToCart, totalCost, showCart }

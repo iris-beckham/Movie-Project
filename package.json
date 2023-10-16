@@ -9,7 +9,9 @@
     "info": "node index.js info",
     "update": "node index.js update",
     "delete": "node index.js delete",
-    "addToCart": "node index.js addToCart" 
+    "addToCart": "node index.js addToCart",
+    "emptyCart": "node index.js emptyCart",
+    "showCart": "node index.js showCart"
   },
   "keywords": [],
   "author": "",
