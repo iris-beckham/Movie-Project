@@ -24,6 +24,8 @@ const run = () => {
             console.log(action, movies)
             writeToFile = true;
             break;
+        default:
+            console.log("There was an error.")
     }
     if(writeToFile){
         writeJSONFile('./data', 'animals.json', updatedMovies);
