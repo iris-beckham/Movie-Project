@@ -6,7 +6,7 @@
   "scripts": {
     "index": "node index.js index",
     "create": "node index.js create",
-    "show": "node index.js show",
+    "info": "node index.js info",
     "update": "node index.js update",
     "destroy": "node index.js destroy"
   },

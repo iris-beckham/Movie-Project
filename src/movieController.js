@@ -1,4 +1,4 @@
-const { randMovie, randFullName, randBoolean, randMask, randQuote, randNumber, randSinger } = require('@ngneat/falso');
+const { randMovie, randFullName, randBoolean, randMask, randQuote, randNumber, randSinger, randLine } = require('@ngneat/falso');
 
 const create = (movies) => {
     const movie = {
@@ -29,5 +29,10 @@ const index = (movies) => {
     return movies.map((movie) => movie.id + ' ' + movie.name).join('\n');
 }
 
-module.exports = {create, createMovies, index}
+const info = (movies, movieID) => {
+    const movie = movies.find((movie) => movie.id === movieID);
+    return `Title: ${movie.name}\nCost: $${movie.priceInCents/100.00}\nDirected By: ${movie.castAndCrew.director}\nStarring: ${movie.castAndCrew.actors.join(", ")}\n"${movie.famousLine}"`
+}
+
+module.exports = {create, createMovies, index, info}
 
