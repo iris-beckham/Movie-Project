@@ -26,12 +26,12 @@ const createMovies = (movies, num) => {
 }
 
 const index = (movies) => {
-    return movies.map((movie) => 'ID: ' + movie.id + '  Title: ' + movie.name + '   Availability: ' + (movie.inStock ? 'in stock' : 'not in stock' )).join('\n');
+    return movies.map((movie) => 'ID: ' + movie.id + '  Title: ' + movie.name + '   Availability: ' + (movie.inStock ? 'in stock' : 'not in stock')).join('\n');
 }
 
 const info = (movies, movieID) => {
     const movie = movies.find((movie) => movie.id === movieID);
-    return `Title: ${movie.name}\nCost: $${movie.priceInCents/100.00}\nStatus: ${movie.inStock ? 'in stock' : 'not in stock'}\nDirected By: ${movie.castAndCrew.director}\nStarring: ${movie.castAndCrew.actors.join(", ")}\n"${movie.famousLine}"`
+    return `Title: ${movie.name}\nCost: $${movie.priceInCents / 100.00}\nStatus: ${movie.inStock ? 'in stock' : 'not in stock'}\nDirected By: ${movie.castAndCrew.director}\nStarring: ${movie.castAndCrew.actors.join(", ")}\n"${movie.famousLine}"`
 }
 
 const editName = (movies, movieID, updatedName) => {
