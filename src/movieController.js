@@ -35,15 +35,29 @@ const info = (movies, movieID) => {
 }
 
 const edit = (movies, movieID, property, updatedValue) => {
+    if (property !== "name" && property !== "inStock" && property !== "priceInCents" && property !== "id" && property !== "famousLine") {
+        console.log("You can only change the following properties:\nname\ninStock\npriceInCents\nid\nfamousLine");
+        return movies;
+    }
     const index = movies.findIndex((movie) => movie.id === movieID);
     if (index > -1) {
         const foundMovie = movies[index];
         const oldValue = foundMovie[property];
         foundMovie.id = movieID;
         if (property === "inStock") {
-            foundMovie[property] = updatedValue === "true";
+            if (updatedValue === "true" || updatedValue === "false") {
+                foundMovie[property] = updatedValue === "true";
+            }else{
+                console.log("inStock can only be true or false");
+                return movies;
+            }
         } else if (property === "priceInCents") {
-            foundMovie[property] = Number(updatedValue);
+            if (Number(updatedValue)) {
+                foundMovie[property] = Number(updatedValue);
+            } else {
+                console.log("priceInCents can only be a number");
+                return movies;
+            }
         } else {
             foundMovie[property] = updatedValue;
         }
