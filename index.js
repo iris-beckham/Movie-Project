@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
-const {create, createMovies, index, info, destroy, editName, edit} = require('./src/movieController')
+const {create, createMovies, index, info, destroy, edit} = require('./src/movieController')
 const {addToCart, totalCost, showCart} = require('./src/cartController')
 
 const movies = readJSONFile('./data', 'movies.json');
