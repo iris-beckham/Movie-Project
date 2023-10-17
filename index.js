@@ -33,8 +33,7 @@ const run = () => {
             break;
         case "addToCart":
             updatedCart = addToCart(movies, cart, arg);
-            console.log(showCart(cart));
-            // console.log(`Total: ${totalCost(cart)}`)
+            console.log(`Cart Total: ${totalCost(cart)}`)
             writeToCartFile = true;
             break;
         case "showCart":
