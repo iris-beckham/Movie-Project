@@ -8,6 +8,7 @@
     "create": "node index.js create",
     "info": "node index.js info",
     "update": "node index.js update",
+    "edit": "node index.js edit",
     "delete": "node index.js delete",
     "addToCart": "node index.js addToCart",
     "emptyCart": "node index.js emptyCart",
