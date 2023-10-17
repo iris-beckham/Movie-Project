@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
-const {create, createMovies, index, info, destroy, editName} = require('./src/movieController')
+const {create, createMovies, index, info, destroy, editName, edit} = require('./src/movieController')
 const {addToCart, totalCost, showCart} = require('./src/cartController')
 
 const movies = readJSONFile('./data', 'movies.json');
@@ -25,6 +25,10 @@ const run = () => {
             break;
         case "update":
             updatedMovies = editName(movies, arg,  process.argv[4])
+            writeToMoviesFile = true;
+            break;
+        case "edit":
+            updatedMovies = edit(movies, arg, process.argv[4], process.argv[5])
             writeToMoviesFile = true;
             break;
         case "delete":
