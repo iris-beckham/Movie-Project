@@ -23,10 +23,6 @@ const run = () => {
         case "info":
             console.log(info(movies, arg))
             break;
-        case "update":
-            updatedMovies = editName(movies, arg,  process.argv[4])
-            writeToMoviesFile = true;
-            break;
         case "edit":
             updatedMovies = edit(movies, arg, process.argv[4], process.argv[5])
             writeToMoviesFile = true;
