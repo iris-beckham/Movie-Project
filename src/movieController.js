@@ -19,6 +19,9 @@ const create = (movies) => {
 }
 
 const createMovies = (movies, num) => {
+    if( isNaN(Number(num))){
+        throw "Please enter a number"
+    }
     for (let i = 0; i < num; i++) {
         movies = create(movies)
     }
@@ -36,8 +39,7 @@ const info = (movies, movieID) => {
 
 const edit = (movies, movieID, property, updatedValue) => {
     if (property !== "name" && property !== "inStock" && property !== "priceInCents" && property !== "id" && property !== "famousLine") {
-        console.log("You can only change the following properties:\nname\ninStock\npriceInCents\nid\nfamousLine");
-        return movies;
+        throw "You can only change the following properties:\nname\ninStock\npriceInCents\nid\nfamousLine";
     }
     const index = movies.findIndex((movie) => movie.id === movieID);
     if (index > -1) {
@@ -48,15 +50,13 @@ const edit = (movies, movieID, property, updatedValue) => {
             if (updatedValue === "true" || updatedValue === "false") {
                 foundMovie[property] = updatedValue === "true";
             }else{
-                console.log("inStock can only be true or false");
-                return movies;
+                throw ("inStock can only be true or false");
             }
         } else if (property === "priceInCents") {
             if (Number(updatedValue)) {
                 foundMovie[property] = Number(updatedValue);
             } else {
-                console.log("priceInCents can only be a number");
-                return movies;
+                throw "priceInCents can only be a number";
             }
         } else {
             foundMovie[property] = updatedValue;
@@ -64,8 +64,7 @@ const edit = (movies, movieID, property, updatedValue) => {
         console.log(`Movie ${property} successfully changed from ${oldValue} to ${foundMovie[property]}`);
         return movies;
     } else {
-        console.log(`Movie with id ${movieID} not found. No action taken`);
-        return movies;
+        throw `Movie with id ${movieID} not found. No action taken`;
     }
 }
 
@@ -77,8 +76,7 @@ const destroy = (movies, movieID) => {
         console.log(`${name} successfully removed from collection`);
         return movies;
     } else {
-        console.log(`Movie with id ${movieID} not found. No action taken`);
-        return movies;
+        throw `Movie with id ${movieID} not found. No action taken`;
     }
 }
 
