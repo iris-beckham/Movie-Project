@@ -5,10 +5,12 @@ const addToCart = (movies, cart, movieID) => {
         if (movies[index].inStock) {
             if (cart.find((movie) => movie.id === movieID)) {
                 cart[cart.findIndex((movie) => movie.id === movieID)].quantity++;
-                cart[cart.length - 1].priceInCents *= 2;
+                cart[cart.length - 1].priceInCents += Number(cart[cart.length - 1].originalCost);
             } else {
                 cart.push(movies[index]);
                 cart[cart.length - 1].quantity = 1;
+                cart[cart.length - 1].originalCost = cart[cart.length - 1].priceInCents;
+                ;
             }
             console.log(`${movies[index].name} successfully added to cart. $${movies[index].priceInCents / 100.00}`);
             return cart;
