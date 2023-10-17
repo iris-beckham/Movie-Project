@@ -34,6 +34,21 @@ const info = (movies, movieID) => {
     return `Title: ${movie.name}\nCost: $${movie.priceInCents / 100.00}\nStatus: ${movie.inStock ? 'in stock' : 'not in stock'}\nDirected By: ${movie.castAndCrew.director}\nStarring: ${movie.castAndCrew.actors.join(", ")}\n"${movie.famousLine}"`
 }
 
+const edit = (movies, movieID, property, updatedValue) =>{
+    const index = movies.findIndex((movie) => movie.id === movieID);
+    if (index > -1) {
+        const foundMovie = movies[index];
+        const oldValue = foundMovie[property];
+        foundMovie.id = movieID;
+        foundMovie[property] = updatedValue;
+        console.log(`Movie ${property} successfully changed from ${oldValue} to ${foundMovie[property]}`);
+        return movies;
+    } else {
+        console.log(`Movie with id ${movieID} not found. No action taken`);
+        return movies;
+    }
+}
+
 const editName = (movies, movieID, updatedName) => {
     const index = movies.findIndex((movie) => movie.id === movieID);
     if (index > -1) {
@@ -74,5 +89,5 @@ const destroy = (movies, movieID) => {
     }
 }
 
-module.exports = {create, createMovies, index, info, destroy, editName}
+module.exports = {create, createMovies, index, info, destroy, editName, edit}
 
