@@ -1,6 +1,6 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
-const {create, createMovies, index, info, destroy, edit} = require('./src/movieController')
-const {addToCart, totalCost, showCart} = require('./src/cartController')
+const { create, createMovies, index, info, destroy, edit } = require('./src/movieController')
+const { addToCart, totalCost, showCart } = require('./src/cartController')
 
 const movies = readJSONFile('./data', 'movies.json');
 const cart = readJSONFile('./data', 'cart.json');
@@ -44,14 +44,18 @@ const run = () => {
             writeToCartFile = true;
             break;
         default:
-            console.log("There was an error.")
+            throw "There was an error.";
     }
-    if(writeToMoviesFile){
+    if (writeToMoviesFile) {
         writeJSONFile('./data', 'movies.json', updatedMovies);
     }
-    if(writeToCartFile){
+    if (writeToCartFile) {
         writeJSONFile('./data', 'cart.json', updatedCart);
     }
 }
 
-run();
+try {
+    run();
+} catch (error) {
+    console.log("Error:\n" + error);
+}
