@@ -1,7 +1,7 @@
 {
-  "name": "command-line-inventory-project",
+  "name": "movie-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "An online movie store that includes a catalogue of movies and a shopping cart for customers to interact with.",
   "main": "index.js",
   "scripts": {
     "index": "node index.js index",
@@ -14,7 +14,7 @@
     "showCart": "node index.js showCart"
   },
   "keywords": [],
-  "author": "",
+  "author": "Iris Beckham",
   "license": "ISC",
   "dependencies": {
     "@ngneat/falso": "^7.1.1"
