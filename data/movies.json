@@ -1,0 +1,112 @@
+[
+  {
+    "name": "One Flew Over the Cuckoo's Nest",
+    "castAndCrew": {
+      "director": "Li Sokolov",
+      "writer": "Aliyu Ueda",
+      "producers": [
+        "Ibrahim Ragnarsdóttir",
+        "Rattana Rowlands"
+      ],
+      "actors": [
+        "Robert Plant",
+        "Aminu Björnsdóttir",
+        "Mohan Nayak",
+        "Uriy Barasa",
+        "Kiran Hoekstra"
+      ]
+    },
+    "inStock": true,
+    "priceInCents": 3005,
+    "id": "b74v3",
+    "famousLine": "Pessimism only describes an attitude, and not facts, and hence is entirely subjective."
+  },
+  {
+    "name": "Sunset Blvd.",
+    "castAndCrew": {
+      "director": "Xiaohong De-Groot",
+      "writer": "Kun Muhammadu",
+      "producers": [
+        "Elke Jiang",
+        "Janet Fu"
+      ],
+      "actors": [
+        "Bruce Springsteen",
+        "Sam Sokolova",
+        "Heinz Musa",
+        "Maria-Pilar Gutiérrez",
+        "Pushpa Song"
+      ]
+    },
+    "inStock": true,
+    "priceInCents": 2882,
+    "id": "w07u2",
+    "famousLine": "How do you nurture a positive attitude when all the statistics say you're a dead man? You go to work."
+  },
+  {
+    "name": "The Sixth Sense",
+    "castAndCrew": {
+      "director": "Dmitriy Harðardóttir",
+      "writer": "Sergio Fialová",
+      "producers": [
+        "Helen Łuczak",
+        "Isabel Sangthong"
+      ],
+      "actors": [
+        "Joni Mitchell",
+        "Lei Halldórsdóttir",
+        "Wirot Ólafsson",
+        "Fran Pospíšil",
+        "Ana-Maria Ūsas"
+      ]
+    },
+    "inStock": true,
+    "priceInCents": 475,
+    "id": "m61k9",
+    "famousLine": "Be sure what you want and be sure about yourself. Fashion is not just beauty, it's about good attitude. You have to believe in yourself and be strong."
+  },
+  {
+    "name": "It's a Wonderful Life",
+    "castAndCrew": {
+      "director": "Rosa Žáková",
+      "writer": "Ying Horáková",
+      "producers": [
+        "Raphael Jiang",
+        "Abdul Nováková"
+      ],
+      "actors": [
+        "Rod Stewart",
+        "Hauwa Chanthara",
+        "Koichi Jónsdóttir",
+        "Ling Sokołowski",
+        "Jason Gíslason"
+      ]
+    },
+    "inStock": true,
+    "priceInCents": 1892,
+    "id": "u74t0",
+    "famousLine": "In the West, you have always associated the Islamic faith 100 percent with Arab culture. This in itself is a fundamentalist attitude and it is mistaken."
+  },
+  {
+    "name": "The Intouchables",
+    "castAndCrew": {
+      "director": "Andrew Bunma",
+      "writer": "Usha Krejčí",
+      "producers": [
+        "Rong Kristinsdóttir",
+        "Magda Gunnarsdóttir"
+      ],
+      "actors": [
+        "Buddy Holly",
+        "Vinod Wanjiku",
+        "Sergey Schäfer",
+        "Amit Karanja",
+        "Carol Óskarsson"
+      ]
+    },
+    "inStock": false,
+    "priceInCents": 472,
+    "id": "h18f7",
+    "famousLine": "If you have a positive attitude and constantly strive to give your best effort, eventually you will overcome your immediate problems and find you are ready for greater challenges."
+  }
+]
